@@ -73,7 +73,42 @@ class MyQueue
     attr_reader :inner_array
 
 end
+```
+
+## Trees
+
+```Ruby
+
+class Node
+    attr_reader :value, :children
+    def initialize(valye, children = [])
+        @value = value
+        @children = children
+    end
+
+    def children_values
+        @children.map { |child| child.value}
+    end
 
 
+
+end
+
+d = Node.new('d')
+e = Node.new('e')
+f = Node.new('f')
+g = Node.new('g')
+b = Node.new('b', [d,e])
+c = Node.new('b', [f,g])
+a = Node.new('b', [b,c])
 
 ```
+
+![[Pasted image 20230519104116.png]]
+
+## Traversing Through a Tree
+
+For tree traversal you can use BFS which will check all the nodes at each level which is very helpful when your tree is very wide but not very long.
+Also for **BFS** you dont need to use recursion which will use less memory.
+
+When using DFS you're using recursion and this methodology is much better when your tree is very long but not wide. This is not to say DFS is better than BFS but its a different strategy to solving the problem at hand. **DFS** uses a lot more memory becaus it is stack dependant unlike **BFS**.
