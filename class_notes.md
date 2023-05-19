@@ -1,6 +1,9 @@
 # Class Notes
 
+## A Stack
+
 ``` Ruby
+#we want to hide the ability to see the secret codes with a inspector method
 
 class Stack
     def initialize
@@ -34,5 +37,43 @@ class Stack
     private
     attr_reader :secret_codes
 end
+
+```
+
+## MyQueue
+
+```Ruby
+
+#here we dont have a inspector because its not part of our rules to not let us see the the queue i.e we dont care if they see it.
+
+class MyQueue
+    def initialize
+        @inner_array = []
+    end
+
+    def enqueue(el)
+        inner_array.push(el)
+    end
+
+    def  dequeue
+        inner_array.shift
+    end
+
+    def show
+        inner_array.dup
+    end
+
+    def empty?
+        inner_array.empty?
+    end
+
+
+
+    private
+    attr_reader :inner_array
+
+end
+
+
 
 ```
