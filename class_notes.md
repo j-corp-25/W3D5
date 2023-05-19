@@ -104,8 +104,6 @@ a = Node.new('b', [b,c])
 
 ```
 
-![[Pasted image 20230519104116.png]]
-
 ## Traversing Through a Tree
 
 For tree traversal you can use BFS which will check all the nodes at each level which is very helpful when your tree is very wide but not very long.
